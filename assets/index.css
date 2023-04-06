@@ -99,9 +99,6 @@ section {
   justify-content: center;
   font-family: Helvetica, sans-serif;
   color: #27384e;
-  /* margin: 0; */
-  /* padding: 0; */
-  /* align-items: center; */
 }
 
 .main-content {
@@ -111,7 +108,6 @@ section {
   text-align: left;
   margin: 0;
   padding: 0;
-  /* padding: 10px; */
 }
 
 .intro {
@@ -125,8 +121,6 @@ section {
   font-size: 31.5px;
   font-weight: 500;
   line-height: 1.2;
-  /* padding: 5px; */
-  /* margin: 5px; */
 }
 
 .intro > h2 span {
@@ -156,22 +150,52 @@ section {
   flex-direction: column;
   font-weight: 500;
   margin: 0 10px;
-  /* padding: 0 10px; */
   text-align: right;
   justify-content: center;
-  /* align-items: center; */
 }
 
-.intro-link > a {
+.intro-link > label {
   text-decoration: none;
-  /* padding: 0; */
   margin: 0 5px;
   padding: 0 15px;
 }
 
-.disclosure {
+/* .disclosure {
+  cursor: pointer;
   color: #007bff;
   font-size: 14px;
+}
+
+.modal{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0, .4);
+}
+
+.modal-content {
+  background-color: #f4f4f4;
+  margin: 10% auto;
+  padding: 20px;
+  max-width: 44%;
+  box-shadow: 0 5px 8px 0 rgba(0,0,0, .2), 0 7px 20px 0 rgba(0,0,0, .17);
+}
+
+.closeBtn{
+  color: #ccc;
+  float: right; 
+  font-size: 30px;
+}
+
+.closeBtn:hover,.closeBtn:focus{
+  cursor: pointer;
+  color: #888;
+  text-decoration: none;
 }
 
 .disclosure:hover {
@@ -185,7 +209,7 @@ section {
 
 .about-our-rankings:hover {
   color: #5a6bcf;
-}
+} */
 
 .side-content {
   display: flex;
@@ -539,4 +563,88 @@ footer > h1 {
 footer > h1:hover {
   cursor: pointer;
   color: gray;
+}
+
+
+.button {
+  background: #428bca;
+  padding: 1em 2em;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #3876ac;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  margin: 10% auto;
+  width: 60%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+
+.modal-header h2,
+.modal-footer h3 {
+  margin: 0;
+}
+
+.modal-header {
+  background: var(--modal-color);
+  padding: 15px;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.modal-body {
+  padding: 10px 20px;
+  background: #fff;
+}
+
+.modal-footer {
+  background: var(--modal-color);
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.close {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+  color: #fff;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
