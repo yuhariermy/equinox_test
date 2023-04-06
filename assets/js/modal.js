@@ -48,8 +48,13 @@ const modalBtn = document.querySelector('#modal-btn');
 const closeBtn = document.querySelector('.close');
 
 // Events
-modalBtn.addEventListener('click', openModal);
-closeBtn.addEventListener('click', closeModal);
+if(modalBtn) {
+  modalBtn.addEventListener('click', openModal)
+}
+if(closeBtn) {
+  closeBtn.addEventListener('click', closeModal);
+  
+}
 window.addEventListener('click', outsideClick);
 
 // Open
