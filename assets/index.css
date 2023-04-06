@@ -160,57 +160,6 @@ section {
   padding: 0 15px;
 }
 
-/* .disclosure {
-  cursor: pointer;
-  color: #007bff;
-  font-size: 14px;
-}
-
-.modal{
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0, .4);
-}
-
-.modal-content {
-  background-color: #f4f4f4;
-  margin: 10% auto;
-  padding: 20px;
-  max-width: 44%;
-  box-shadow: 0 5px 8px 0 rgba(0,0,0, .2), 0 7px 20px 0 rgba(0,0,0, .17);
-}
-
-.closeBtn{
-  color: #ccc;
-  float: right; 
-  font-size: 30px;
-}
-
-.closeBtn:hover,.closeBtn:focus{
-  cursor: pointer;
-  color: #888;
-  text-decoration: none;
-}
-
-.disclosure:hover {
-  color: #5a6bcf;
-}
-
-.about-our-rankings {
-  color: #007bff;
-  font-size: 12px;
-}
-
-.about-our-rankings:hover {
-  color: #5a6bcf;
-} */
-
 .side-content {
   display: flex;
   flex-direction: column;
@@ -535,23 +484,72 @@ button {
 
 /* MODAL STYLES
 -------------------------------*/
+
+.label-modal {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.modalHeader {
+  padding:0;
+  margin: 0;
+  border-bottom: 1px solid #000;
+}
+
+.modalHeader > h2{
+  font-size: 5px;
+  font-weight: 300;
+}
+
+.closeBtn{
+  color: #ccc;
+  float: right; 
+  font-size: 20px;
+  position: relative;
+  top: -55px;
+  right: 15px;
+  border: none;
+  border-radius: 50px;
+  /* padding: 0; */
+}
+
+.closeBtn:hover,.closeBtn:focus{
+  cursor: pointer;
+  color: #888;
+  text-decoration: none;
+}
+
+.disclosure:hover {
+  color: #5a6bcf;
+}
+
+.disclosure {
+  color: #007bff;
+  font-size: 14px;
+}
+.about-our-rankings {
+  color: #007bff;
+  font-size: 12px;
+}
+
+.about-our-rankings:hover {
+  color: #5a6bcf;
+}
+
 .jw-modal {
-  /* modals are hidden by default */
   display: none;
-
-  /* modal container fixed across whole screen */
   position: fixed;
-  inset: 0;
-
-  /* z-index must be higher than everything else on the page */
-  z-index: 10000;
-  
-  /* semi-transparent black background exposed by padding */
-  background-color: rgba(0, 0, 0, .75);
-  padding: 40px;
-
-  /* enables scrolling for tall modals */
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
   overflow: auto;
+  background-color: rgba(0,0,0, .4);
+  /* padding: 40px; */
 }
 
 .jw-modal.open {
@@ -559,14 +557,20 @@ button {
 }
 
 .jw-modal-body {
-  padding: 20px;
-  background: #fff;
+  background-color: #f4f4f4;
+  margin: 2% auto;
+  padding: 5px 0;
+  max-width: 44%;
+  box-shadow: 0 5px 8px 0 rgba(0,0,0, .2), 0 7px 20px 0 rgba(0,0,0, .17);
+
 }
 
 body.jw-modal-open {
   /* body overflow is hidden to hide main scrollbar when modal window is open */
   overflow: hidden;
 }
+
+
 
 /* 
 PRODUCT SWIPER
