@@ -13,7 +13,7 @@
       type="image/png"
       href="assets/images/review_site_1_bg-favicon.png"
     />
-    <link rel="stylesheet" href="assets/index.css" />
+    <link rel="stylesheet" href="../assets/index.css" />
     <link
       rel="preload"
       href="/fonts/fa-solid-900.woff2"
@@ -22,67 +22,24 @@
       crossorigin
     />
   </head>
-  <body
-    class="cat"
-    data-new-gr-c-s-check-loaded="14.1102.0"
-    data-gr-ext-installed
-  >
-    <header>
-      <img
-        class="logo"
-        src="assets/images/review_site_1_buyersguide_logo.svg"
-        alt="logo"
-      />
-      <nav class="main-menu">
+  <body>
+    <header id="root">
+      <a href="/" onclick="route()">
+        <img
+          class="logo"
+          src="assets/images/review_site_1_buyersguide_logo.svg"
+          alt="logo"
+        />
+      </a>
+      <nav id="main-menu" class="main-menu">
         <ul>
-          <li><a>About</a></li>
-          <li><a>Categories</a></li>
-          <li><a>Blog</a></li>
+          <li><a href="/about" onclick="route()">About</a></li>
+          <li><a href="/categories" onclick="route()">Categories</a></li>
+          <li><a href="/blog" onclick="route()">Blog</a></li>
         </ul>
       </nav>
     </header>
-
-    <section id="content">
-      <div class="main-content">
-        <div class="intro">
-          <h2>10 Best Air Purifiers 2023 <span>Updated April 2023</span></h2>
-          <div class="intro-description">
-            <p>
-              Join the millions that have trusted BuyersGuide.org to help them
-              make smarter buying decisions. Let our independent expert reviews
-              and data-driven shopping recommendations help you find the air
-              purifier that's right for you.
-            </p>
-            <div class="intro-link">
-              <a class="disclosure" href="#">Advertiser disclosure</a>
-              <a class="about-our-rankings" href="#">About our rankings</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="side-content">
-        <div class="purifier-types">
-          <h1>Air Purifier Types</h1>
-          <ul>
-            <li>Best Overall</li>
-            <li>For Pets</li>
-            <li>Alergy</li>
-            <li>For Mold</li>
-            <li>Large Room</li>
-            <li>For Smoke</li>
-            <li>HEPA</li>
-            <li>Home</li>
-          </ul>
-        </div>
-        <div class="purifier-types">
-          <h1>Related Categories</h1>
-          <ul>
-            <li>Humidifiers</li>
-            <li>Air Filters</li>
-            <li>Dehumidifiers</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    <div id="content"></div>
+    <script src="/assets/js/router.js"></script>
   </body>
 </html>

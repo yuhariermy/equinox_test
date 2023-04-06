@@ -6,10 +6,15 @@ body {
   text-align: center;
   margin: auto !important;
   padding: 0;
+  margin: 0;
   line-height: 1.5;
   color: #212529;
   font-size: 1rem;
   max-width: 1420px;
+}
+
+div {
+  display: block
 }
 
 *,
@@ -22,11 +27,16 @@ a,
 body,
 p {
   font-weight: 300;
+  text-decoration: none;
 }
 
+
+/* 
+  NAVBAR
+*/
 header {
   display: flex !important;
-  /* flex-direction: row; */
+  /* flex-direction: column; */
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
@@ -218,4 +228,315 @@ section {
   background-color: #f8f9fa;
   color: #808080;
   font-weight: 700;
+}
+
+
+/* 
+PRODUCT details
+*/
+.products {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 10px 10px;
+  padding-left: 30px;
+  gap: 1.5em;
+}
+
+.product-1  {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #dee2e6;
+  box-shadow: .5px 2px rgb(0,0,0, .1);
+  padding: 10px;
+}
+
+.product-1 > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-1 > a img {
+  vertical-align: middle;
+  border-style: none;
+  height: auto;
+  object-fit: contain;
+  max-width: 185px;
+  min-width: 135px;
+  max-height: 170px !important;
+  height: 150px;
+  /* width: inherit; */
+  display : block;
+  /* padding-left: 10px; */
+
+}
+
+.product-description {
+  font-family: Helvetica, sans-serif;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.product-description > h1 {
+  width: 100%;
+  margin: 0;
+  padding-left: 30px;
+  border-bottom: 2px solid #2387db !important;
+}
+
+.product-description > h2 {
+  padding: 5px 10px;
+  margin: 0;
+  color: #2387db;
+  font-size: 16px;
+}
+
+.product-description > h3 {
+  color: #000;
+  font-weight: 600;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.product-description > ul {
+  width: 100%;
+  margin: 0;
+  padding: 5px 25px;
+  color: #000;
+  font-weight: 300;
+}
+
+.product-description > ul > li span {
+  font-weight: 600;
+}
+
+.product-description > p {
+  margin: 0;
+  padding:0;
+}
+
+
+.check-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.check-price-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #dee2e6;
+  box-shadow:  0px 2px rgb(0,0,0, .1);
+  padding: 20px;
+  gap: 1.5em;
+}
+
+.check-price-box > a > button {
+  width: 200px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  display: inherit;
+  color: #fff;
+  font-size: 16px;
+  background-color: orange;
+  border: none;
+  padding: 20px;
+}
+
+.check-price-box > img {
+  width: 75px;
+  margin: 0;
+  padding: 0;
+  /* height: 15px; */
+}
+
+.check-price > p {
+  margin: 0;
+  padding: 0;
+}
+
+.product-img > img {
+  /* width: 150px;
+  height: 150px; */
+  display: block;
+}
+
+.tag {
+  display: inline;
+}
+
+.top-banner-left {
+  background: url(../assets/images/top-banner-left.png) 0 0/cover round;
+  width: 16px;
+  height: 50px;
+  position: relative;
+  top: -129px;
+  left: -23px;
+  background-size: cover;
+  -webkit-background-size: cover;
+  overflow: hidden;
+}
+
+.top-banner {
+  margin-top: -179px;
+  margin-left: -8px;
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  white-space:nowrap;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 0 0 !important;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background: url(../assets/images/top-banner.png) 0 0/cover round;
+}
+
+.top-banner-right {
+  width: 12px;
+  height: 50px;
+  background: url(../assets/images/top-banner-right.png) 0 0/cover round;
+  position: relative;
+  top: -34px;
+  left: 150px;
+  background-size: cover;
+  -webkit-background-size: cover;
+}
+.top-banner-left3 {
+  background: url(../assets/images/top-banner-left.png) 0 0/cover round;
+  width: 16px;
+  height: 50px;
+  position: relative;
+  top: -115px;
+  right: 25px;
+  background-size: cover;
+  -webkit-background-size: cover;
+}
+
+.top-banner3 {
+  top: -165px;
+  left: -10px;
+  width: 132px;
+  height: 50px;
+  position: relative;
+  white-space: nowrap;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 0 0 !important;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background: url(../assets/images/top-banner.png) 0 0/cover round;
+}
+
+.top-banner-right3 {
+  display: inline;
+  width: 12px;
+  height: 50px;
+  background: url(../assets/images/top-banner-right.png) 0 0/cover round;
+  position: absolute;
+  top: 0px;
+  background-size: cover;
+  -webkit-background-size: cover;
+}
+
+
+.ordinal1 {
+  position: relative;
+  top: -25px;
+  left: -27px;
+  height: 36px;
+  width: 36px;
+  border: 2px solid #127ed8;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 21px;
+  color: #127ed8;
+  font-weight: 700;
+  text-align: center;
+}
+.ordinal {
+  position: relative;
+  left: -27px;
+  height: 36px;
+  width: 36px;
+  border: 2px solid #127ed8;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 21px;
+  color: #127ed8;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* 
+PRODUCT SWIPER
+*/
+.product-swiper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-swiper > h1{
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.product-others {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #dee2e6;
+  margin: 10px;
+  max-width: 200px;
+}
+
+.product > img {
+  width: 130px;
+  height: auto;
+  padding: 0;
+  margin:0;
+}
+
+.product > p {
+  padding: 15px;
+  text-align: center;
+  font-weight: 700;
+}
+
+footer {
+  background-color: brown;
+  height: 400px;
+  max-width: 1420px;
+}
+
+footer > h1 {
+  color: white;
+}
+
+footer > h1:hover {
+  cursor: pointer;
+  color: gray;
 }
