@@ -1,61 +1,73 @@
-// // import "../index.css";
+// var slideIndex = 1;
+// showSlides(slideIndex);
 
-// const prevBtn = document.querySelector("div.prev-arrow");
-// const nextBtn = document.querySelector("div.next-arrow");
-// const sectionContainer = document.querySelector("div.carousel-sections");
+// function plusSlides(n){
+//     showSlides(slideIndex += n)
+// }
 
-// prevBtn.onclick = prev;
-// nextBtn.onclick = next;
+// function currentSlide(n) {
+//     showSlides(slideIndex = n)
+// }
 
-// let currentIndex = 0;
-// let slides = [];
-// let dots = [];
-
-// function render() {
-//   let offset = 0;
-//   slides.forEach((slide, index) => {
-//     if (index < currentIndex) {
-//       offset += slide.offsetWidth;
+// function showSlides(n) {
+//     var i;
+//     var slides = document.getElementsByClassName("mySlides")
+//     var dots = document.getElementsByClassName("dot")
+//     if( n > slides.length) {slideIndex = 1 }
+//     if (n < 1) {slideIndex = slides.length}
+//     for (i = 0; i < slides.length; i++) {
+//         slides[i].style.display = "none";
+//         // console.log(slides[1])
 //     }
-//   });
-
-//   sectionContainer.style.transform = `translateX(-${offset}px)`;
-//   dots.forEach((dot, index) => {
-//     index === currentIndex
-//       ? dot.classList.add("active")
-//       : dot.classList.remove("active");
-//   });
+//     for(i = 0; i < dots.length; i++) {
+//         dots[i].className =  dots[i].className.replace("active", "")
+//     }
+//     // console.log(dots[1])
+//     slides[slideIndex - 1].style.display = "block";
+//     // dots[slideIndex - 1].className += "active"
 // }
 
-// function prev() {
-//   if (currentIndex < 0) return;
-//   currentIndex -= 1;
-//   render();
-// }
+// Select all slides
+const slides = document.querySelectorAll(".slide");
 
-// function next() {
-//   if (currentIndex === slides.length - 1) return;
-//   currentIndex += 1;
-//   render();
-// }
+// loop through slides and set each slides translateX property to index * 100% 
+slides.forEach((slide, indx) => {
+  slide.style.transform = `translateX(${indx * 100}%)`;
+});
 
-// function goto(newIndex) {
-//   if (newIndex < 0 || newIndex > slides.length - 1) return;
-//   currentIndex = newIndex;
-//   render();
-// }
+// select next slide button
+const nextSlide = document.querySelector(".btn-next");
 
-// function init() {
-//   const newSlides = document.querySelectorAll("div.carousel-sections > div");
-//   slides = newSlides;
+// current slide counter
+let curSlide = 0;
+// maximum number of slides
+let maxSlide = slides.length - 1;
 
-//   const newDots = document.querySelectorAll("div.carousel-dots > div");
-//   newDots.forEach((dot, index) => {
-//     dot.onclick = () => goto(index);
-//   });
-//   dots = newDots;
+// add event listener and navigation functionality
+nextSlide.addEventListener("click", function () {
+  // check if current slide is the last and reset current slide
+  if (curSlide === maxSlide) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+  }
 
-//   render();
-// }
+//   move slide by -100%
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
+});
 
-// init();
+// select prev slide button
+const prevSlide = document.querySelector(".btn-prev");
+prevSlide.addEventListener("click", function () {
+    // check if current slide is the first and reset current slide to last
+  if (curSlide === 0) {
+    curSlide = maxSlide;
+  } else {
+    curSlide--;
+  }
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
+})
