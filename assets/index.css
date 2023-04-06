@@ -523,6 +523,7 @@ button {
 }
 
 .disclosure:hover {
+  cursor: pointer;
   color: #5a6bcf;
 }
 
@@ -536,6 +537,7 @@ button {
 }
 
 .about-our-rankings:hover {
+  cursor: pointer;
   color: #5a6bcf;
 }
 
