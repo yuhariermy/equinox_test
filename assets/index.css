@@ -9,7 +9,7 @@ body {
   margin: 0;
   line-height: 1.5;
   color: #212529;
-  font-size: 1rem;
+  font-size: 18px;
   max-width: 1420px;
 }
 
@@ -191,6 +191,7 @@ section {
 
 .purifier-types > ul > li {
   cursor: pointer;
+  font-size: 15px;
   padding: 0.75rem 1.25rem;
   border-bottom: 1px solid #dee2e6 !important;
   background-color: #fff;
@@ -702,20 +703,194 @@ PRODUCT SWIPER
   font-weight: 700;
 }
 
-footer {
-  background-color: brown;
-  height: 400px;
+
+/* =============== CONTENT DESCRIPTION ======================= */
+.content-description {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  font-family: Helvetica, sans-serif;
+  color: #27384e;
   max-width: 1420px;
 }
 
-footer > h1 {
-  color: white;
+.about-rankings {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  padding: 5px 40px;
+  margin: 0;
 }
 
-footer > h1:hover {
+.about-rankings > h1 {
+  margin: 0;
+  padding:0;
+}
+
+.about-rankings > img {
+  justify-content: center;
+  align-self: center;
+}
+
+.about-rankings > ul {
+  padding: 0px 60px;
+}
+
+.about-rankings > ul > li span {
+  font-weight: 800;
+  line-height: 2em;
+}
+
+.ranking-data {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  /* gap: 50px; */
+}
+
+.data {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.data > img{
+  /* margin: 20px 80px; */
+  width: 100px;
+  height: 110px;
+}
+
+.data span {
+  display: block;
+}
+
+.data > p {
+  text-align: center;
+  max-width: 200px;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.h1-blue-color {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #045fac!important;
+}
+
+.how-it-works {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  gap: 1.5em;
+}
+.how-it-works2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  gap: 1.5em;
+}
+
+.how-it-works > h1 {
+  align-self: center;
+  width: 55%;
+  border-bottom: 5px solid #045fac;
+  line-height: 55px;
+  /* border-bottom-width: initial ; */
+}
+.how-it-works2 > h1 {
+  align-self: center;
+  width: 140%;
+  border-bottom: 5px solid #045fac;
+  line-height: 55px;
+  /* border-bottom-width: initial ; */
+}
+
+
+/* ==================FOOTER===================== */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  /* height: 450px; */
+  background-color: #515151;
+  justify-content: flex-start;  
+  align-items: center;
+  padding: 10px 0px 25px 0;
+  max-width: 1420px;
+}
+
+.footer-container > h1 {
+  padding:0;
+  margin:0;
+  position: relative;
+  color: #fefefe;
+  font-size: 64px;
+  left: -40px;
+  z-index:999;
+  -webkit-text-stroke: 1px black;
+}
+
+.footer-container > h1 span {
+  border: none;
+  position: relative;
+  left: 85%;
+  z-index: -1;
+}
+
+.footer-container > h1:focus, .footer-container > h1:hover {
+  color:rgba(128, 128, 128, 1);
   cursor: pointer;
-  color: gray;
 }
 
+.subscribe > p {
+  color: #fff;
+  font-size: 24px;
+  padding: 0;
+  margin:0;
+}
 
+.subscribe > p span > button {
+  background-color: orange;
+  color: #fefefe;
+}
+/* .subscribe > p  > input {
+  background-color: #fff;
+} */
+.subscribe > p  > input, span button {
+  border: none;
+  padding: 10px 10px;
+}
 
+.subscribe > h5 {
+  color: #fff;
+  font-weight: 300 ;
+  padding: 0;
+}
+
+.subscribe > h5 span {
+  color: #888;
+}
+
+.menu-footer  {
+  text-decoration: none;
+  font-size: 20px;
+}
+.menu-footer > a {
+  color: #fff !important;
+}
+.menu-footer > a:hover {
+  cursor: pointer;
+  color: #888 !important;
+}
