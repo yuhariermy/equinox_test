@@ -19,24 +19,29 @@
               <p>Some text in the Modal..</p>
             </div>
           </div> -->
-          
-          <button id="modalBtn" class="button">Click Me Dave</button>
-
-  <div id="simpleModal" class="modal-overlay">
-    <div class="modal-content">
-      <div class="modal-header">
-          <span class="closeBtn"> ♥</span>
-          <h2>Header</h2>
-      </div>
-      <div class="modal-body">
-        <p>Hello</p>
-        <p>Showing Dave how to make a modal</p>
-      </div>
-      <div class="modal-footer">
-        <h3>Footer</h3>
-      </div>
-    </div>
-  </div>
+          <div>
+            <div>
+                <h1>Vanilla JS + CSS - Modal Popup Example</h1>
+                <p>Click the buttons below to open the example modals</p>
+                <button onclick="openModal('modal-1')">Open Modal 1</button>
+                <button onclick="openModal('modal-2')">Open Modal 2</button>
+            </div>
+    
+            <div id="modal-1" class="jw-modal">
+                <div class="jw-modal-body">
+                    <h1>A custom modal popup</h1>
+                    <button onclick="closeModal()">Close</button>
+                </div>
+            </div>
+    
+            <div id="modal-2" class="jw-modal">
+                <div class="jw-modal-body">
+                    <h1>A tall modal popup</h1>
+                    <p style="padding-bottom: 1500px;">Close with the button below or by clicking the background.</p>
+                    <button onclick="closeModal()">Close</button>
+                </div>
+            </div>
+        </div>
         </div>
       </div>
       <div id="products" class="products">

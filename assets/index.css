@@ -528,59 +528,45 @@ PRODUCT details
   background: #e439ef;
   cursor: pointer;
 }
+button {
+  padding: 7px 10px;
+  margin-right: 5px;
+}
 
-.modal-overlay{
+/* MODAL STYLES
+-------------------------------*/
+.jw-modal {
+  /* modals are hidden by default */
   display: none;
+
+  /* modal container fixed across whole screen */
   position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
+  inset: 0;
+
+  /* z-index must be higher than everything else on the page */
+  z-index: 10000;
+  
+  /* semi-transparent black background exposed by padding */
+  background-color: rgba(0, 0, 0, .75);
+  padding: 40px;
+
+  /* enables scrolling for tall modals */
   overflow: auto;
-  background-color: rgba(0,0,0,0.5);
 }
 
-.modal-content{
-  background-color: #f4f4f4;
-  margin: 20% auto;
-  width: 70%;
-  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+.jw-modal.open {
+  display: block;
 }
 
-.modal-header h2, .modal-footer h3{
-  margin: 0;
+.jw-modal-body {
+  padding: 20px;
+  background: #fff;
 }
 
-.modal-header{
-  background: #1ce;
-  padding: 15px;
-  color: #fff;
+body.jw-modal-open {
+  /* body overflow is hidden to hide main scrollbar when modal window is open */
+  overflow: hidden;
 }
-
-.modal-body{
-  padding: 10px 20px;
-}
-
-.modal-footer{
-  background: #1ce;
-  padding: 10px;
-  color: #fff;
-  text-align: center;
-}
-
-.closeBtn{
-  font-size: 30px;
-  color: #fff;
-  float: right;
-}
-
-.closeBtn:hover,.closeBtn:focus{
-  color: #e439ef;
-  text-decoration: none;
-  cursor:  pointer;
-}
-
 
 /* 
 PRODUCT SWIPER
