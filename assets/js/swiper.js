@@ -1,71 +1,51 @@
-var slideIndex = 1;
-showSlides(slideIndex);
+const gap = 16;
 
-function plusSlides(n){
-    showSlides(slideIndex += n)
-}
+const carousel = document.getElementById("inner"),
+  content = document.getElementById("card"),
+  next = document.getElementById("next-option"),
+  prev = document.getElementById("prev-option");
 
-function currentSlide(n) {
-    showSlides(slideIndex = n)
-}
+next.addEventListener("click", e => {
+  carousel.scrollBy(width + gap, 0);
+  if (carousel.scrollWidth !== 0) {
+    prev.style.display = "flex";
+  }
+  if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+    next.style.display = "none";
+  }
+});
+prev.addEventListener("click", e => {
+  carousel.scrollBy(-(width + gap), 0);
+  if (carousel.scrollLeft - width - gap <= 0) {
+    prev.style.display = "none";
+  }
+  if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+    next.style.display = "flex";
+  }
+});
 
-function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides")
-    var dots = document.getElementsByClassName("dot")
-    if( n > slides.length) {slideIndex = 1 }
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+let width = carousel.offsetWidth;
+window.addEventListener("resize", e => (width = carousel.offsetWidth));
+
+// Dot Function
+
+const buttonsWrapper = document.querySelector(".map");
+const slides = document.querySelector(".inner");
+
+buttonsWrapper.addEventListener("click", e => {
+  if (e.target.nodeName === "BUTTON") {
+    Array.from(buttonsWrapper.children).forEach(item =>
+      item.classList.remove("active")
+    );
+    if (e.target.classList.contains("first")) {
+      slides.style.transform = "translateX(-0%)";
+      e.target.classList.add("active");
+    } else if (e.target.classList.contains("second")) {
+      slides.style.transform = "translateX(-33.33333333333333%)";
+      e.target.classList.add("active");
+    } else if (e.target.classList.contains('third')){
+      slides.style.transform = 'translatex(-66.6666666667%)';
+      e.target.classList.add('active');
     }
-    for(i = 0; i < dots.length; i++) {
-        dots[i].className =  dots[i].className.replace("active", "")
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += "active"
-}
-
-// // Select all slides
-// const slides = document.querySelectorAll(".slide");
-
-// // loop through slides and set each slides translateX property to index * 100% 
-// slides.forEach((slide, indx) => {
-//   slide.style.transform = `translateX(${indx * 100}%)`;
-// });
-
-// // select next slide button
-// const nextSlide = document.querySelector(".btn-next");
-
-// // current slide counter
-// let curSlide = 0;
-// // maximum number of slides
-// let maxSlide = slides.length - 1;
-
-// // add event listener and navigation functionality
-// nextSlide.addEventListener("click", function () {
-//   // check if current slide is the last and reset current slide
-//   if (curSlide === maxSlide) {
-//     curSlide = 0;
-//   } else {
-//     curSlide++;
-//   }
-
-// //   move slide by -100%
-//   slides.forEach((slide, indx) => {
-//     slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-//   });
-// });
-
-// // select prev slide button
-// const prevSlide = document.querySelector(".btn-prev");
-// prevSlide.addEventListener("click", function () {
-//     // check if current slide is the first and reset current slide to last
-//   if (curSlide === 0) {
-//     curSlide = maxSlide;
-//   } else {
-//     curSlide--;
-//   }
-//   slides.forEach((slide, indx) => {
-//     slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-//   });
-// })
+  }
+});
